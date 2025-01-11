@@ -1,12 +1,26 @@
 "use client";
 
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
 import { Button } from "@/components/ui/button";
 import { LogOut } from "lucide-react";
 
 export default function InternDashboard() {
   const router = useRouter();
+  const [username, setUsername] = useState<string>("");
+  useEffect(() => {
+    // Ensure this code runs only on the client side
+    if (typeof window !== "undefined") {
+      const role = localStorage.getItem("role");
+      const storedUsername = localStorage.getItem("username");
+      // Redirect if role is not found or not "INTERN"
+      if (!role || role !== "INTERN") {
+        router.push("/");
+      } else {
+        setUsername(storedUsername || "");
+      }
+    }
+  }, [router]);
 
   const handleLogout = () => {
     localStorage.removeItem("username");
@@ -30,9 +44,7 @@ export default function InternDashboard() {
         </div>
       </nav>
       <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-        <p className="text-lg text-black">
-          Welcome, {localStorage.getItem("username")}!
-        </p>
+        <p className="text-lg text-black">Welcome, {username}!</p>
       </main>
     </div>
   );
