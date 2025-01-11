@@ -13,7 +13,10 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Kalash",
+  title: {
+    default: "Kalash",
+    template: "%s - Kalash",
+  },
   description: "Learning Platform",
 };
 

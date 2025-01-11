@@ -18,6 +18,7 @@ interface Course {
   tags: string[];
   access: "PUBLIC" | "PRIVATE";
   accessor?: string[];
+  classification: "Easy" | "Medium" | "Tough" | "Important" | "Skippable";
 }
 
 interface Module {
@@ -94,13 +95,18 @@ const CoursesPage = () => {
                     value={`item-${courseIndex}`}
                   >
                     <AccordionTrigger className="hover:no-underline">
-                      <div className="flex items-center gap-2">
-                        {course.name}
-                        {course.access === "PRIVATE" ? (
-                          <Lock className="h-4 w-4" />
-                        ) : (
-                          <Globe className="h-4 w-4" />
-                        )}
+                      <div className="flex items-center justify-between w-full">
+                        <div className="flex items-center gap-2">
+                          {course.name}
+                          {course.access === "PRIVATE" ? (
+                            <Lock className="h-4 w-4" />
+                          ) : (
+                            <Globe className="h-4 w-4" />
+                          )}
+                        </div>
+                        <div className="text-sm font-medium bg-gray-100 text-gray-700 px-2 py-1 rounded">
+                          {course.classification}
+                        </div>
                       </div>
                     </AccordionTrigger>
                     <AccordionContent>

@@ -30,13 +30,6 @@ export default function DashboardPage() {
       link: "/intern/teams",
       color: "text-green-600",
     },
-    {
-      title: "Schedule",
-      icon: Calendar,
-      description: "View upcoming events",
-      link: "/intern/schedule",
-      color: "text-orange-600",
-    },
   ];
 
   return (

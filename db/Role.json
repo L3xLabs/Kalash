@@ -15,19 +15,19 @@
     "username": "admin3",
     "password": "adminpass3",
     "role": "ADMIN",
-    "company": "Infosys"
+    "company": "Google"
   },
   {
     "username": "admin4",
     "password": "adminpass4",
     "role": "ADMIN",
-    "company": "Infosys"
+    "company": "Microsoft"
   },
   {
     "username": "admin5",
     "password": "adminpass5",
     "role": "ADMIN",
-    "company": "Infosys"
+    "company": "Google"
   },
   {
     "username": "nishkarshrc",
@@ -45,7 +45,7 @@
     "username": "INTERN3",
     "password": "INTERNpass3",
     "role": "INTERN",
-    "company": "Infosys"
+    "company": "Microsoft"
   },
   {
     "username": "INTERN4",
@@ -56,6 +56,12 @@
   {
     "username": "INTERN5",
     "password": "INTERNpass5",
+    "role": "INTERN",
+    "company": "Infosys"
+  },
+  {
+    "username": "prasad",
+    "password": "3q2ahpvAwNky",
     "role": "INTERN",
     "company": "Infosys"
   }

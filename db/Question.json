@@ -1,0 +1,69 @@
+[
+  {
+    "id": 1,
+    "type": "radio",
+    "question": "What is your preferred working style?",
+    "options": [
+      "I prefer working independently",
+      "I enjoy a mix of independent and team work",
+      "I thrive in collaborative environments"
+    ]
+  },
+  {
+    "id": 2,
+    "type": "radio",
+    "question": "How do you handle project deadlines?",
+    "options": [
+      "I complete work well ahead of deadlines",
+      "I pace myself to finish just in time",
+      "I work best under pressure close to deadlines"
+    ]
+  },
+  {
+    "id": 3,
+    "type": "slider",
+    "question": "Rate your comfort level with public speaking (1-10)"
+  },
+  {
+    "id": 4,
+    "type": "radio",
+    "question": "What role do you typically take in a team?",
+    "options": [
+      "Leader/Coordinator",
+      "Creative/Innovator",
+      "Implementer/Doer",
+      "Analyzer/Researcher"
+    ]
+  },
+  {
+    "id": 5,
+    "type": "slider",
+    "question": "Rate your technical skills in your primary programming language (1-10)"
+  },
+  {
+    "id": 6,
+    "type": "radio",
+    "question": "How do you prefer to communicate in a team?",
+    "options": [
+      "Primarily through written communication (email, chat)",
+      "Mix of written and verbal communication",
+      "Primarily through verbal communication (calls, meetings)"
+    ]
+  },
+  {
+    "id": 7,
+    "type": "radio",
+    "question": "What type of projects interest you most?",
+    "options": [
+      "Frontend/UI Development",
+      "Backend/API Development",
+      "Full-stack Development",
+      "Data Analysis/ML"
+    ]
+  },
+  {
+    "id": 8,
+    "type": "slider",
+    "question": "Rate your problem-solving skills (1-10)"
+  }
+]

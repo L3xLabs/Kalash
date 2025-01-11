@@ -1,0 +1,41 @@
+{
+  "teams": [
+    {
+      "teamId": "Team1",
+      "members": ["Rahul", "Anjali", "Jyoti", "Ritu", "Tarun"],
+      "teamStrengths": ["Leadership", "Problem-solving", "Data Analysis/ML"]
+    },
+    {
+      "teamId": "Team2",
+      "members": ["Karan", "Isha", "Aakash", "Kriti", "nishkarshrc"],
+      "teamStrengths": [
+        "Technical Skills",
+        "Communication",
+        "Full-stack Development"
+      ]
+    },
+    {
+      "teamId": "Team3",
+      "members": ["Kavita", "Siddharth", "Megha", "Gaurav", "Aditya"],
+      "teamStrengths": ["Collaboration", "Research", "Backend/API Development"]
+    },
+    {
+      "teamId": "Team4",
+      "members": ["Pooja", "Rashmi", "Bhavna", "Komal", "Varun"],
+      "teamStrengths": [
+        "Implementation",
+        "Innovation",
+        "Frontend/UI Development"
+      ]
+    },
+    {
+      "teamId": "Team5",
+      "members": ["Prasad", "Aditi", "Raj", "Sneha", "Manoj"],
+      "teamStrengths": [
+        "Independence",
+        "Deadline Management",
+        "Analytical Skills"
+      ]
+    }
+  ]
+}

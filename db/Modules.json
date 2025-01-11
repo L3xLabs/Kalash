@@ -9,7 +9,8 @@
           "https://www.youtube.com/watch?v=wTGaoB8E98-3"
         ],
         "tags": ["for loop", "conditionals in python", "file I/O"],
-        "access": "PRIVATE"
+        "access": "PRIVATE",
+        "classification": "Easy"
       },
       {
         "name": "Python Data Types",
@@ -19,7 +20,8 @@
         ],
         "tags": ["lists", "tuples", "dictionaries"],
         "access": "PUBLIC",
-        "accessor": ["Infosys", "Google"]
+        "accessor": ["Infosys", "Google"],
+        "classification": "Medium"
       }
     ]
   },
@@ -33,7 +35,8 @@
           "https://www.youtube.com/watch?v=ZDa-Z5JzLYM"
         ],
         "tags": ["classes", "inheritance", "polymorphism"],
-        "access": "PRIVATE"
+        "access": "PRIVATE",
+        "classification": "Tough"
       },
       {
         "name": "Python Libraries",
@@ -43,7 +46,8 @@
         ],
         "tags": ["NumPy", "Pandas", "Matplotlib"],
         "access": "PUBLIC",
-        "accessor": ["Microsoft", "Amazon"]
+        "accessor": ["Microsoft", "Amazon"],
+        "classification": "Important"
       }
     ]
   }

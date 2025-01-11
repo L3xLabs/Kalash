@@ -61,19 +61,7 @@ export default function InternLayout({
       id: "teams",
       label: "My Teams",
       icon: Users,
-      path: "/intern/teams",
-    },
-    {
-      id: "schedule",
-      label: "Schedule",
-      icon: Calendar,
-      path: "/intern/schedule",
-    },
-    {
-      id: "settings",
-      label: "Settings",
-      icon: Settings,
-      path: "/intern/settings",
+      path: "/intern/dashboard/teams",
     },
   ];
 
