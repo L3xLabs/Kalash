@@ -1,0 +1,50 @@
+[
+  {
+    "moduleName": "Python Basics",
+    "content": [
+      {
+        "name": "Python Beginner",
+        "videos": [
+          "https://www.youtube.com/watch?v=wTGaoB8EL-4",
+          "https://www.youtube.com/watch?v=wTGaoB8E98-3"
+        ],
+        "tags": ["for loop", "conditionals in python", "file I/O"],
+        "access": "PRIVATE"
+      },
+      {
+        "name": "Python Data Types",
+        "videos": [
+          "https://www.youtube.com/watch?v=O6P86uwfdR0",
+          "https://www.youtube.com/watch?v=nwjAHQERL08"
+        ],
+        "tags": ["lists", "tuples", "dictionaries"],
+        "access": "PUBLIC",
+        "accessor": ["Infosys", "Google"]
+      }
+    ]
+  },
+  {
+    "moduleName": "Intermediate Python",
+    "content": [
+      {
+        "name": "Object-Oriented Programming",
+        "videos": [
+          "https://www.youtube.com/watch?v=JeznW_7DlB0",
+          "https://www.youtube.com/watch?v=ZDa-Z5JzLYM"
+        ],
+        "tags": ["classes", "inheritance", "polymorphism"],
+        "access": "PRIVATE"
+      },
+      {
+        "name": "Python Libraries",
+        "videos": [
+          "https://www.youtube.com/watch?v=IEEhzQoKtQU",
+          "https://www.youtube.com/watch?v=6Qs3wObeWwc"
+        ],
+        "tags": ["NumPy", "Pandas", "Matplotlib"],
+        "access": "PUBLIC",
+        "accessor": ["Microsoft", "Amazon"]
+      }
+    ]
+  }
+]

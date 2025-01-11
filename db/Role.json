@@ -1,0 +1,62 @@
+[
+  {
+    "username": "rakshitmc",
+    "password": "123456",
+    "role": "ADMIN",
+    "company": "Infosys"
+  },
+  {
+    "username": "admin2",
+    "password": "adminpass2",
+    "role": "ADMIN",
+    "company": "Infosys"
+  },
+  {
+    "username": "admin3",
+    "password": "adminpass3",
+    "role": "ADMIN",
+    "company": "Infosys"
+  },
+  {
+    "username": "admin4",
+    "password": "adminpass4",
+    "role": "ADMIN",
+    "company": "Infosys"
+  },
+  {
+    "username": "admin5",
+    "password": "adminpass5",
+    "role": "ADMIN",
+    "company": "Infosys"
+  },
+  {
+    "username": "nishkarshrc",
+    "password": "234567",
+    "role": "INTERN",
+    "company": "Infosys"
+  },
+  {
+    "username": "INTERN2",
+    "password": "INTERNpass2",
+    "role": "INTERN",
+    "company": "Infosys"
+  },
+  {
+    "username": "INTERN3",
+    "password": "INTERNpass3",
+    "role": "INTERN",
+    "company": "Infosys"
+  },
+  {
+    "username": "INTERN4",
+    "password": "INTERNpass4",
+    "role": "INTERN",
+    "company": "Infosys"
+  },
+  {
+    "username": "INTERN5",
+    "password": "INTERNpass5",
+    "role": "INTERN",
+    "company": "Infosys"
+  }
+]
