@@ -8,18 +8,6 @@ import { LogOut } from "lucide-react";
 export default function InternDashboard() {
   const router = useRouter();
 
-  useEffect(() => {
-    // Ensure this code runs only on the client side
-    if (typeof window !== "undefined") {
-      const role = localStorage.getItem("role");
-
-      // Redirect if role is not found or not "INTERN"
-      if (!role || role !== "INTERN") {
-        router.push("/");
-      }
-    }
-  }, [router]);
-
   const handleLogout = () => {
     localStorage.removeItem("username");
     localStorage.removeItem("role");
