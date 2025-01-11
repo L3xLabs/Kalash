@@ -1,51 +1,143 @@
+// app/intern/dashboard/page.tsx
 "use client";
 
-import { useEffect, useState } from "react";
-import { useRouter } from "next/navigation";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { LogOut } from "lucide-react";
+import { BrainCircuit, BookOpen, Users, Calendar } from "lucide-react";
+import { cn } from "@/lib/utils";
+import Link from "next/link";
 
-export default function InternDashboard() {
-  const router = useRouter();
-  const [username, setUsername] = useState<string>("");
-  useEffect(() => {
-    // Ensure this code runs only on the client side
-    if (typeof window !== "undefined") {
-      const role = localStorage.getItem("role");
-      const storedUsername = localStorage.getItem("username");
-      // Redirect if role is not found or not "INTERN"
-      if (!role || role !== "INTERN") {
-        router.push("/");
-      } else {
-        setUsername(storedUsername || "");
-      }
-    }
-  }, [router]);
-
-  const handleLogout = () => {
-    localStorage.removeItem("username");
-    localStorage.removeItem("role");
-    router.push("/");
-  };
+export default function DashboardPage() {
+  const quickActions = [
+    {
+      title: "Take Team Match Quiz",
+      icon: BrainCircuit,
+      description: "Find your ideal team members",
+      link: "/intern/dashboard/quiz",
+      color: "text-purple-600",
+    },
+    {
+      title: "View Courses",
+      icon: BookOpen,
+      description: "Access your learning materials",
+      link: "/intern/dashboard/courses",
+      color: "text-blue-600",
+    },
+    {
+      title: "Team Overview",
+      icon: Users,
+      description: "Check your team status",
+      link: "/intern/teams",
+      color: "text-green-600",
+    },
+    {
+      title: "Schedule",
+      icon: Calendar,
+      description: "View upcoming events",
+      link: "/intern/schedule",
+      color: "text-orange-600",
+    },
+  ];
 
   return (
-    <div className="min-h-screen bg-gray-50">
-      <nav className="bg-white shadow-sm">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
-          <h1 className="text-2xl font-bold">Intern Dashboard</h1>
-          <Button
-            variant="outline"
-            onClick={handleLogout}
-            className="flex items-center gap-2"
-          >
-            <LogOut className="h-4 w-4" />
-            Logout
-          </Button>
-        </div>
-      </nav>
-      <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-        <p className="text-lg text-black">Welcome, {username}!</p>
-      </main>
+    <div className="space-y-6">
+      <Card>
+        <CardHeader>
+          <CardTitle>Intern Dashboard</CardTitle>
+        </CardHeader>
+        <CardContent>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            {quickActions.map((action, index) => (
+              <Link key={index} href={action.link}>
+                <Card className="hover:bg-gray-50 transition-colors cursor-pointer">
+                  <CardContent className="pt-6">
+                    <div className="flex items-center gap-4">
+                      <div
+                        className={cn(
+                          "p-2 rounded-lg bg-white shadow-sm",
+                          action.color
+                        )}
+                      >
+                        <action.icon className="h-6 w-6" />
+                      </div>
+                      <div>
+                        <h3 className="font-medium">{action.title}</h3>
+                        <p className="text-sm text-gray-500">
+                          {action.description}
+                        </p>
+                      </div>
+                    </div>
+                  </CardContent>
+                </Card>
+              </Link>
+            ))}
+          </div>
+        </CardContent>
+      </Card>
+
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <Card>
+          <CardHeader>
+            <CardTitle>Recent Activities</CardTitle>
+          </CardHeader>
+          <CardContent>
+            <div className="space-y-4">
+              <div className="flex items-center gap-4">
+                <div className="w-2 h-2 rounded-full bg-green-500" />
+                <div>
+                  <p className="text-sm font-medium">Completed Module 1</p>
+                  <p className="text-xs text-gray-500">2 hours ago</p>
+                </div>
+              </div>
+              <div className="flex items-center gap-4">
+                <div className="w-2 h-2 rounded-full bg-blue-500" />
+                <div>
+                  <p className="text-sm font-medium">Team Meeting Scheduled</p>
+                  <p className="text-xs text-gray-500">Yesterday</p>
+                </div>
+              </div>
+              <div className="flex items-center gap-4">
+                <div className="w-2 h-2 rounded-full bg-purple-500" />
+                <div>
+                  <p className="text-sm font-medium">Quiz Completion</p>
+                  <p className="text-xs text-gray-500">2 days ago</p>
+                </div>
+              </div>
+            </div>
+          </CardContent>
+        </Card>
+
+        <Card>
+          <CardHeader>
+            <CardTitle>Upcoming Deadlines</CardTitle>
+          </CardHeader>
+          <CardContent>
+            <div className="space-y-4">
+              <div className="flex items-center justify-between">
+                <div>
+                  <p className="text-sm font-medium">Project Submission</p>
+                  <p className="text-xs text-gray-500">Module 2</p>
+                </div>
+                <p className="text-sm text-red-500">2 days left</p>
+              </div>
+              <div className="flex items-center justify-between">
+                <div>
+                  <p className="text-sm font-medium">Team Presentation</p>
+                  <p className="text-xs text-gray-500">Sprint Review</p>
+                </div>
+                <p className="text-sm text-orange-500">5 days left</p>
+              </div>
+              <div className="flex items-center justify-between">
+                <div>
+                  <p className="text-sm font-medium">Course Completion</p>
+                  <p className="text-xs text-gray-500">Web Development</p>
+                </div>
+                <p className="text-sm text-green-500">2 weeks left</p>
+              </div>
+            </div>
+          </CardContent>
+        </Card>
+      </div>
     </div>
   );
 }
