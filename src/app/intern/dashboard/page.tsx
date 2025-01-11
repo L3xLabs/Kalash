@@ -9,10 +9,14 @@ export default function InternDashboard() {
   const router = useRouter();
 
   useEffect(() => {
-    // Check if user is authenticated and is an intern
-    const role = localStorage.getItem("role");
-    if (!role || role !== "INTERN") {
-      router.push("/");
+    // Ensure this code runs only on the client side
+    if (typeof window !== "undefined") {
+      const role = localStorage.getItem("role");
+
+      // Redirect if role is not found or not "INTERN"
+      if (!role || role !== "INTERN") {
+        router.push("/");
+      }
     }
   }, [router]);
 
